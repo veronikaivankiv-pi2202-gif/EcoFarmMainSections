@@ -1,0 +1,443 @@
+/* Основні стилі */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Шапка (Header) */
+.header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4CAF50;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #4CAF50;
+}
+
+/* Перший екран (Hero Section) */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 150px 0;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-hero {
+    background-color: #4CAF50;
+    border: 2px solid #4CAF50;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+}
+
+/* Секції */
+section {
+    padding: 80px 0;
+}
+
+/* Секція "Про нас" */
+.about-us {
+    background-color: #eaf7e9;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.about-image {
+    flex: 1;
+    text-align: right;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Секція "Переваги" */
+.advantages {
+    background-color: #fff;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.advantage-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.advantage-item h3 {
+    color: #4CAF50;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Секція "Відгуки" */
+.testimonials {
+    background-color: #f5f5f5;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    text-align: right;
+    color: #4CAF50;
+}
+
+/* Секція "Товари" */
+.products {
+    background-color: #fff;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-title {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.product-description {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Футер (Footer) */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.social-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.social-link:hover {
+    opacity: 1;
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.burger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #4CAF50;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Медіа-запити для адаптивності */
+/* Mobile first approach starts here */
+
+/* Mobile devices (320px - 480px) */
+@media (max-width: 480px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        text-align: center;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+
+    .nav.active {
+        display: block;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image {
+        order: -1;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+
+/* iPads, Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .header .container {
+        flex-direction: row;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .nav.active {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        text-align: center;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Small screens, laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .burger-menu {
+        display: none;
+    }
+    
+    .nav {
+        display: block;
+    }
+    
+    .about-content {
+        gap: 30px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Desktops, large screens (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .burger-menu {
+        display: none;
+    }
+    .nav {
+        display: block;
+    }
+}
+
+/* Extra large screens, TV (1201px and more) */
+@media (min-width: 1201px) {
+    .burger-menu {
+        display: none;
+    }
+    .nav {
+        display: block;
+    }
+}
